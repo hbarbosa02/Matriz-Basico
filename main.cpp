@@ -21,7 +21,6 @@ int main( int x, int y )
         }
         cout<<"\n";
     }
-
     cout<<"Soma de todos os termos da matriz :\n"<<soma<<"\n";
 
     int menor, maior;
@@ -30,7 +29,7 @@ int main( int x, int y )
     {
         for(j = 1 ; j <= y ; j++)
         {
-            if (A[i][j] <= menor)
+            if (A[i][j] <= menor) // o erro do menor valor tá ocorrendo aqui na condição.
             {
                 menor = A[i][j];
             }
@@ -41,7 +40,9 @@ int main( int x, int y )
         }
     }
     cout<<"\nO maior e o menor valores sao:\nmaior = "<<maior<<"\nmenor = "<<menor<<"\n\n";
+    
     int sdp = 0, sds = 0;
+    
     if(x == y)
     {
     for(i = 1 ; i <=  x ; i++)
@@ -52,7 +53,7 @@ int main( int x, int y )
             {
                 sdp = sdp + A[i][j];
             }
-            if (i == 2 && j == 2)
+            if (i == 2 && j == 2)         //tá com um erro nessa parte do código em relação a 3x3.
             {
                    if(j == 3-i)
                 {
@@ -72,8 +73,8 @@ int main( int x, int y )
     }
     if (x == y)
     {
-    cout<<"soma da diagonal secundaria:"<<sds<<"\n";
-    cout<<"soma da diagonal principal:"<<sdp<<"\n";
+       cout<<"soma da diagonal secundaria:"<<sds<<"\n";
+       cout<<"soma da diagonal principal:"<<sdp<<"\n";
     }
 
     int det;
@@ -96,10 +97,20 @@ int main( int x, int y )
     cout<<"\nentre com o numero da coluna que deseja a soma dos termos\n";
     cin>>m;
 
-   soma = A[n][1] + A[n][2] + A[n][3];
-   cout<<"Soma da linha da matriz e ="<<soma<<"\n";
-   soma1= A[1][m] + A[2][m] + A[3][m];
-   cout<<"soma da coluna e ="<<soma1<<"\n";
+    if(x == 3 && y == 3)
+    {
+        soma = A[n][1] + A[n][2] + A[n][3];
+        cout<<"Soma da linha da matriz e ="<<soma<<"\n";
+        soma1= A[1][m] + A[2][m] + A[3][m];
+        cout<<"soma da coluna e ="<<soma1<<"\n";
+    }
+    else
+    {
+        soma = A[n][1] + A[n][2] ;
+        cout<<"Soma da linha da matriz e ="<<soma<<"\n";
+        soma1= A[1][m] + A[2][m];
+        cout<<"soma da coluna e ="<<soma1<<"\n";
+    }
 
    return 0;
 }
