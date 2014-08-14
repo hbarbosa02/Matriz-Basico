@@ -76,16 +76,16 @@ int main( int x, int y )
        cout<<"soma da diagonal secundaria:"<<sds<<"\n";
        cout<<"soma da diagonal principal:"<<sdp<<"\n";
     }
-
+https://github.com/hbarbosa02/Matriz-Basico/issues
     int det;
     if (x == 2 && y == 2)
     {
-        det = A[1][1] + A[2][2] - A[1][2] - A[2][1];
+        det = A[1][1] * A[2][2] - A[1][2] * A[2][1];
         cout<<"Determinante da Matriz 2x2 e = "<<det<<"\n";
     }
     if (x == 3 && y == 3)
     {
-        det = A[1][1] + A[2][2] + A[3][3] +A[1][2] + A[2][3] + A[3][1] +A[1][3] + A[2][1] + A[3][2] - A[1][3] - A[2][2] - A[3][1] - A[1][1] - A[2][3] - A[3][2] - A[1][2] - A[2][1] - A[3][1];
+        det = A[1][1] * A[2][2] * A[3][3] + A[1][2] * A[2][3] * A[3][1] + A[1][3] * A[2][1] * A[3][2] - A[1][3] * A[2][2] * A[3][1] - A[1][1] * A[2][3] * A[3][2] - A[1][2] * A[2][1] * A[3][1];
         cout<<"Determinante da Matriz 3x3 e = "<<det<<"\n";
     }
 
