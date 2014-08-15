@@ -76,7 +76,7 @@ int main( int x, int y )
        cout<<"soma da diagonal secundaria:"<<sds<<"\n";
        cout<<"soma da diagonal principal:"<<sdp<<"\n";
     }
-https://github.com/hbarbosa02/Matriz-Basico/issues
+
     int det;
     if (x == 2 && y == 2)
     {
